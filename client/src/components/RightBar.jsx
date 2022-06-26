@@ -3,7 +3,8 @@ import { Box } from '@mui/material';
 
 const RightBar = () => {
   return (
-    <Box bgcolor='violet' flex={2}>
+    // flex layout. p fpr pading
+    <Box bgcolor='violet' flex={2} p={2} sx={{display:{xs: 'none', sm: 'block' } }}>
       Right Bar
       </Box>
   );

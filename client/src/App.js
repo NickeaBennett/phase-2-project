@@ -10,24 +10,25 @@
 
 // import ResponsiveAppBar from './components/Nav';
 // import Navbar from './components/Nav';
-// import { Homepage, Cryptocurrencies, Favorites} from './components/';
+import NavBar from './components/NavBar';
 import RightBar from './components/RightBar';
 import Feed from './components/Feed';
-import LeftBar from './components/LeftBar';
-import Cryptocurrencies from './components/Cryptocurrencies';
-import Favorites from './components/Favorites';
+import SideBar from './components/SideBar';
+// import Cryptocurrencies from './components/Cryptocurrencies';
+// import Favorites from './components/Favorites';
 
-import { Box, Container, Stack } from '@mui/material';
+import { Box, Stack } from '@mui/material';
 
 function App() {
 
      return (   
         <Box>
-            <Stack direction='row' spacing={2} justifyContent='space-between'>            {/* <Navbar /> */}
-                <LeftBar/>
-                <Feed />
-                <RightBar/>
-            </Stack>
+            <NavBar />
+                <Stack direction='row' spacing={2} justifyContent='space-between'>            {/* <Navbar /> */}
+                    <SideBar/>
+                    <Feed />
+                    <RightBar/>
+                </Stack>
         </Box>
         // <div className='App'>
         //     <h1>Hello World</h1>
