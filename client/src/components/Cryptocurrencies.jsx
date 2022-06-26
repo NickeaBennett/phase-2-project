@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box } from '@mui/material';
- import DataTable from './datatable/DataTable';
+ import DataTable from './DataTable';
 
 const Cryptocurrencies = () => {
   

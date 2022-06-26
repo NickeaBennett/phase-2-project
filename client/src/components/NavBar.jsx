@@ -1,6 +1,6 @@
 import { AppBar, Toolbar, styled, Typography, InputBase } from '@mui/material';
 import BitcoinIcon from '@mui/icons-material/CurrencyBitcoin';
-import Autocomplete from '@mui/material/Autocomplete';
+// import Autocomplete from '@mui/material/Autocomplete';
 
 import React from 'react';
 

@@ -1,11 +1,12 @@
 import React from 'react';
+
 import { Box } from '@mui/material';
 
 const Favorites = () => {
   return (
-    <Box bgcolor='violet'>
-      Favorites
-      </Box>
+    <Box bgcolor='#FAF9F6' flex={4} p={2}>
+       
+    </Box>
   );
 }
 
