@@ -1,12 +1,16 @@
 import React from 'react'
-import { Box } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 
 const RightBar = () => {
   return (
     // flex layout. p fpr pading
-    <Box bgcolor='violet' flex={2} p={2} sx={{display:{xs: 'none', sm: 'block' } }}>
-      Right Bar
+    <Box flex={1} p={2} sx={{display:{xs: 'none', sm: 'block' } }}>
+      <Box position={'fixed'}>
+        <Typography>
+          Top Ten Coins
+        </Typography >
       </Box>
+    </Box>
   );
 }
 

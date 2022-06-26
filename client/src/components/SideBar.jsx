@@ -18,33 +18,35 @@ const LeftBar = () => {
       p={2} 
       sx={{display:{xs: 'none', sm: 'block' } }}
       >
-      <List>
-        <ListItem disablePadding>
-          <ListItemButton componemt='a' href='#home'>
-            <ListItemIcon>
-              <HomeIcon color='inherit'/>
-            </ListItemIcon>
-            <ListItemText primary='Home' />
-          </ListItemButton>
-        </ListItem>
-        <ListItem disablePadding>
-          <ListItemButton componemt='a' href='#cryptocurrencies'>
-            <ListItemIcon>
-              <BitcoinIcon color='inherit'/>
-            </ListItemIcon>
-            <ListItemText primary='Crypto'/>
-          </ListItemButton>
-        </ListItem>
-        <ListItem disablePadding>
-          <ListItemButton componemt='a' href='#favorites'>
-            <ListItemIcon>
-              <FavoriteIcon color='inherit'/>
-            </ListItemIcon>
-            <ListItemText primary='Favorites'/>
-          </ListItemButton>
-        </ListItem>
-      </List>
+      <Box position={'fixed'}>
+        <List>
+          <ListItem disablePadding>
+            <ListItemButton componemt='a' href='#home'>
+              <ListItemIcon>
+                <HomeIcon color='inherit'/>
+              </ListItemIcon>
+              <ListItemText primary='Home' />
+            </ListItemButton>
+          </ListItem>
+          <ListItem disablePadding>
+            <ListItemButton componemt='a' href='#cryptocurrencies'>
+              <ListItemIcon>
+                <BitcoinIcon color='inherit'/>
+              </ListItemIcon>
+              <ListItemText primary='Crypto'/>
+            </ListItemButton>
+          </ListItem>
+          <ListItem disablePadding>
+            <ListItemButton componemt='a' href='#favorites'>
+              <ListItemIcon>
+                <FavoriteIcon color='inherit'/>
+              </ListItemIcon>
+              <ListItemText primary='Favorites'/>
+            </ListItemButton>
+          </ListItem>
+        </List>
       </Box>
+    </Box>
   );
 }
 

@@ -14,6 +14,7 @@ import NavBar from './components/NavBar';
 import RightBar from './components/RightBar';
 import Feed from './components/Feed';
 import SideBar from './components/SideBar';
+import DataTable from './components/DataTable';
 // import Cryptocurrencies from './components/Cryptocurrencies';
 // import Favorites from './components/Favorites';
 
@@ -26,10 +27,13 @@ function App() {
             <NavBar />
                 <Stack direction='row' spacing={2} justifyContent='space-between'>            {/* <Navbar /> */}
                     <SideBar/>
-                    <Feed />
+                    <DataTable />
+                    {/* <Feed /> */}
                     <RightBar/>
                 </Stack>
         </Box>
+
+        
         // <div className='App'>
         //     <h1>Hello World</h1>
         //     <Stack spacing={2} direction="row">
@@ -50,6 +54,7 @@ function App() {
         //         </Typography>;
         //     </div>
         // </div>
+        
     );
 }
 

@@ -14,7 +14,7 @@ import {
   
   import { red } from '@mui/material/colors';
   import { 
-    Share, 
+    // Share, 
     Favorite, 
     FavoriteBorder, 
     MoreVert  
@@ -59,7 +59,7 @@ const Post = () => {
               />
           </IconButton>
           <IconButton aria-label="share">
-            <Share />
+            {/* <Share /> */}
           </IconButton>
         </CardActions>
       </Card>
