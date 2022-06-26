@@ -1,7 +1,7 @@
-import React from 'react';
-import { Stack, Button, Typography } from '@mui/material';
-import HomeIcon from '@mui/icons-material/HomeOutlined';
-// import { Routes, Route } from 'react-router-dom';
+// import React from 'react';
+// import { Stack, Button, Typography } from '@mui/material';
+// import HomeIcon from '@mui/icons-material/HomeOutlined';
+// // import { Routes, Route } from 'react-router-dom';
 // import { Typography } from '@mui/material';
 // import CssBaseline from '@mui/material/CssBaseline';
 // import { Layout, Typography, Space } from 'antd';
@@ -11,22 +11,44 @@ import HomeIcon from '@mui/icons-material/HomeOutlined';
 // import ResponsiveAppBar from './components/Nav';
 // import Navbar from './components/Nav';
 // import { Homepage, Cryptocurrencies, Favorites} from './components/';
+import RightBar from './components/RightBar';
+import Feed from './components/Feed';
+import LeftBar from './components/LeftBar';
+import Cryptocurrencies from './components/Cryptocurrencies';
+import Favorites from './components/Favorites';
+
+import { Box, Container, Stack } from '@mui/material';
 
 function App() {
+
      return (   
-        <div className='App'>
-            <h1>Hello World</h1>
-            <Stack spacing={2} direction="row">
-                <Button variant="text">Text</Button>
-                <Button startIcon={<HomeIcon />} variant="contained">Contained</Button>
-                <Button variant="outlined">Outlined</Button>
+        <Box>
+            <Stack direction='row' spacing={2} justifyContent='space-between'>            {/* <Navbar /> */}
+                <LeftBar/>
+                <Feed />
+                <RightBar/>
             </Stack>
-            <div>
-                <Typography variant="h1" component="h2">
-                    h1. Heading
-                </Typography>;
-            </div>
-        </div>
+        </Box>
+        // <div className='App'>
+        //     <h1>Hello World</h1>
+        //     <Stack spacing={2} direction="row">
+        //         <Button variant="text">Text</Button>
+        //         <Button 
+        //             startIcon={<HomeIcon />} 
+        //             variant='contained'
+        //             color='otherColor'
+        //             size='small'
+        //             >
+        //                 Contained
+        //         </Button>
+        //         <Button variant="outlined">Outlined</Button>
+        //     </Stack>
+        //     <div>
+        //         <Typography variant="h1" component="h2">
+        //             h1. Heading
+        //         </Typography>;
+        //     </div>
+        // </div>
     );
 }
 
