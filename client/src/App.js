@@ -1,33 +1,34 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Stack, Button, Typography } from '@mui/material';
+import HomeIcon from '@mui/icons-material/HomeOutlined';
+// import { Routes, Route } from 'react-router-dom';
 // import { Typography } from '@mui/material';
-import CssBaseline from '@mui/material/CssBaseline';
+// import CssBaseline from '@mui/material/CssBaseline';
 // import { Layout, Typography, Space } from 'antd';
 // import { HeartOutlined } from "@ant-design/icons";
 // Imports components from index.js
-import Navbar from './components/Navbar';
-// import NavMenu from './components/Navbarjsx';
+
+// import ResponsiveAppBar from './components/Nav';
+// import Navbar from './components/Nav';
 // import { Homepage, Cryptocurrencies, Favorites} from './components/';
 
-const App = () => (
-        <div className='app'>
-            <div className="navbar">
-                {/* <NavMenu /> */}
+function App() {
+     return (   
+        <div className='App'>
+            <h1>Hello World</h1>
+            <Stack spacing={2} direction="row">
+                <Button variant="text">Text</Button>
+                <Button startIcon={<HomeIcon />} variant="contained">Contained</Button>
+                <Button variant="outlined">Outlined</Button>
+            </Stack>
+            <div>
+                <Typography variant="h1" component="h2">
+                    h1. Heading
+                </Typography>;
             </div>
-                {/* Layout component for routing from antd */}
-                <div className='routes'>
-                    <Routes>
-                        <Route exact path="/"></Route>
-                        <Route exact path="/cryptocurrencies"></Route>
-                        {/* <Route exact path="/exchanges" element={<Exchanges />}></Route> */}
-                        {/* <Route exact path="/crypto/:coidId" element={<CoinDetails />}></Route> / */}
-                        {/* dynamically render each coin detail coinId stored in variable*/}
-                        <Route exact path="/favorites"></Route>
-                        {/* <Route exact path="/news" element={<News />}></Route> */}
-                    </Routes>
-                </div>
-          </div>
-);
+        </div>
+    );
+}
 
 export default App;
 
@@ -41,8 +42,8 @@ export default App;
 // // import PersistentDrawerLeft from "./components/drawer/Drawer";
 // // import AppBar from '@material-ui/core/AppBar';
 // // import Layout from './components/layout/Layout';
-// import NavMenu from "./components/navmenu/NavMenu";
-// // import DataTable from "./components/datatable/DataTable";
+// import NavMenu from "./components/navMenu/NavMenu";
+// // import DataTable from "./components/dataTable/DataTable";
 // // import { makeStyles } from "@mui/material/styles";
 // import { Routes, Route } from "react-router-dom";
 // // import { HomeIcon } from "./components/layout/Layout";
@@ -110,7 +111,7 @@ export default App;
 //       //       <div className="Routes">
 //       //         <Routes>
 //       //           <Route path="/" element={<Homepage />} />
-//       //           <Route path="/cryptocurency" element={<Cryptocurrency />} />
+//       //           <Route path="/cryptocurrency" element={<Cryptocurrency />} />
 //       //           <Route path="/favorites" element={<Favorites />} />
 //       //         </Routes>
 //               </div>
