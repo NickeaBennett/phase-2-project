@@ -1,7 +1,5 @@
-// import React from 'react';
 // import { Stack, Button, Typography } from '@mui/material';
 // import HomeIcon from '@mui/icons-material/HomeOutlined';
-// // import { Routes, Route } from 'react-router-dom';
 // import { Typography } from '@mui/material';
 // import CssBaseline from '@mui/material/CssBaseline';
 // import { Layout, Typography, Space } from 'antd';
@@ -10,57 +8,89 @@
 
 // import ResponsiveAppBar from './components/Nav';
 // import Navbar from './components/Nav';
-import NavBar from './components/NavBar';
-import RightBar from './components/RightBar';
-import Feed from './components/Feed';
-import SideBar from './components/SideBar';
-import DataTable from './components/DataTable';
-// import Cryptocurrencies from './components/Cryptocurrencies';
-// import Favorites from './components/Favorites';
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 
-import { Box, Stack } from '@mui/material';
+import NavBar from './components/layout/NavBar';
+// import SideBar from './components/layout/SideBar';
+// import RightBar from './components/layout/RightBar';
+
+import Home from './components/pages/Home';
+import Cryptos from './components/pages/Cryptos';
+import Favorites from './components/pages/Favorites';
+import News from './components/pages/News';
+
+
+// import { Box } from '@mui/material';
+import { useEffect, useState } from 'react';
+// import PageRoutes from './components/pages/PageRoutes';
+// import DataTable from './components/coins/DataTable';
+
+const API_URL = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc%2C%20gecko_desc%2C%20gecko_asc%2C%20market_cap_asc%2C%20market_cap_desc%2C%20volume_asc%2C%20volume_desc%2C%20id_asc%2C%20id_desc&per_page=100&page=1&sparkline=true&price_change_percentage=1h%2C%2024h%2C%207d%2C%2014d%2C%2030d%2C%20200d%2C%201y'
+
 
 function App() {
+    const [getCoins, setGetCoins] = useState([])
+    
+        useEffect(() => {
+            fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc%2C%20gecko_desc%2C%20gecko_asc%2C%20market_cap_asc%2C%20market_cap_desc%2C%20volume_asc%2C%20volume_desc%2C%20id_asc%2C%20id_desc&per_page=100&page=1&sparkline=true&price_change_percentage=1h%2C%2024h%2C%207d%2C%2014d%2C%2030d%2C%20200d%2C%201y', {
+                headers: {
+                    'accept': 'application/json'
+                }
+            })
+
+    },[])
+
 
      return (   
-        <Box>
+        <div className='App'>
             <NavBar />
-                <Stack direction='row' spacing={2} justifyContent='space-between'>            {/* <Navbar /> */}
-                    <SideBar/>
-                    <DataTable />
-                    {/* <Feed /> */}
-                    <RightBar/>
-                </Stack>
-        </Box>
+            <Routes>
+                <Route exact path="/" element={<Home />} />
+                {/* <Route exact path="home" element={<Home />} /> */}
+                <Route exact path="cryptos" element={<Cryptos />} />
+                <Route exact path="favorites" element={<Favorites />} />
+                <Route exact path="news" element={<News />} />
+            </Routes>
+            {/* <Stack direction='row' spacing={2} justifyContent='space-between'>            <Navbar /> */}
+            {/* <SideBar/> */}
+            {/* <DataTable /> */}
+            {/* <Home /> */}
+            {/* <RightBar/> */}
+            {/* <PageRoutes /> */}
+            {/* </Stack> */}
+
+               
+        </div>
 
         
-        // <div className='App'>
-        //     <h1>Hello World</h1>
-        //     <Stack spacing={2} direction="row">
-        //         <Button variant="text">Text</Button>
-        //         <Button 
-        //             startIcon={<HomeIcon />} 
-        //             variant='contained'
-        //             color='otherColor'
-        //             size='small'
-        //             >
-        //                 Contained
-        //         </Button>
-        //         <Button variant="outlined">Outlined</Button>
-        //     </Stack>
-        //     <div>
-        //         <Typography variant="h1" component="h2">
-        //             h1. Heading
-        //         </Typography>;
-        //     </div>
-        // </div>
-        
-    );
+
+);
 }
 
 export default App;
 
 
+// <div className='App'>
+//     <h1>Hello World</h1>
+//     <Stack spacing={2} direction="row">
+//         <Button variant="text">Text</Button>
+//         <Button 
+//             startIcon={<HomeIcon />} 
+//             variant='contained'
+//             color='otherColor'
+//             size='small'
+//             >
+//                 Contained
+//         </Button>
+//         <Button variant="outlined">Outlined</Button>
+//     </Stack>
+//     <div>
+//         <Typography variant="h1" component="h2">
+//             h1. Heading
+//         </Typography>;
+//     </div>
+// </div>
 
 // import * as React from 'react';
 // // import { createTheme, ThemeProvider } from '@mui/material/styles';
