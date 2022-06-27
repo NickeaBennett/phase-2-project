@@ -5,43 +5,25 @@
 // import { Layout, Typography, Space } from 'antd';
 // import { HeartOutlined } from "@ant-design/icons";
 // Imports components from index.js
-
 // import ResponsiveAppBar from './components/Nav';
 // import Navbar from './components/Nav';
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-
 import NavBar from './components/layout/NavBar';
 // import SideBar from './components/layout/SideBar';
 // import RightBar from './components/layout/RightBar';
-
 import Home from './components/pages/Home';
 import Cryptos from './components/pages/Cryptos';
 import Favorites from './components/pages/Favorites';
 import News from './components/pages/News';
-
-
 // import { Box } from '@mui/material';
 import { useEffect, useState } from 'react';
 // import PageRoutes from './components/pages/PageRoutes';
 // import DataTable from './components/coins/DataTable';
 
-const API_URL = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc%2C%20gecko_desc%2C%20gecko_asc%2C%20market_cap_asc%2C%20market_cap_desc%2C%20volume_asc%2C%20volume_desc%2C%20id_asc%2C%20id_desc&per_page=100&page=1&sparkline=true&price_change_percentage=1h%2C%2024h%2C%207d%2C%2014d%2C%2030d%2C%20200d%2C%201y'
-
 
 function App() {
-    const [getCoins, setGetCoins] = useState([])
-    
-        useEffect(() => {
-            fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc%2C%20gecko_desc%2C%20gecko_asc%2C%20market_cap_asc%2C%20market_cap_desc%2C%20volume_asc%2C%20volume_desc%2C%20id_asc%2C%20id_desc&per_page=100&page=1&sparkline=true&price_change_percentage=1h%2C%2024h%2C%207d%2C%2014d%2C%2030d%2C%20200d%2C%201y', {
-                headers: {
-                    'accept': 'application/json'
-                }
-            })
-
-    },[])
-
-
+  
      return (   
         <div className='App'>
             <NavBar />

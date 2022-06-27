@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+
 import { 
+    Box,
     Card, 
     CardHeader, 
     CardMedia, 
@@ -20,9 +22,49 @@ import {
     MoreVert  
   } from '@mui/icons-material';
 
+
+
+
 const Post = () => {
+  const [getPost, setPost] = useState([])
+
+
+  const bull = (
+  <Box
+      component="span"
+      sx={{ display: 'inline-block', mx: '2px', transform: 'scale(0.8)' }}
+  >
+      •
+  </Box>
+  );
+
+  const options = {
+      method: 'GET',
+      headers: {
+          'X-RapidAPI-Key': '586442e325mshf74f712bf9c91fdp184977jsnaf37f0c91999',
+          'X-RapidAPI-Host': 'crypto-pulse.p.rapidapi.com'
+      }
+  };
+
+
+
+      useEffect(() => {
+        console.log(setPost.data)
+        fetch('https://crypto-pulse.p.rapidapi.com/news', options)
+          .then(r => r.json())
+          .then(data => setPost(data))
+          .catch(err => console.error(err));
+      }, [])
+
+    
+          
+
+
   return (
-    <Card sx={{margin:5}}>
+    <Card 
+      row
+      sx={{margin:5}}
+    >
           <CardHeader
             avatar={
               <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
@@ -45,9 +87,7 @@ const Post = () => {
         /> 
         <CardContent>
           <Typography variant="body2" color="text.secondary">
-            This impressive paella is a perfect party dish and a fun meal to cook
-            together with your guests. Add 1 cup of frozen peas along with the mussels,
-            if you like.
+          
           </Typography>
         </CardContent>
         <CardActions disableSpacing>
