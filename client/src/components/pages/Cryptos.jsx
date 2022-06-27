@@ -5,7 +5,7 @@ import { Box } from '@mui/material';
 const Cryptos = () => {
   
   return (
-    <Box>
+    <Box flex={4} p={10}>
       <DataTable />
     </Box>
   );

@@ -47,7 +47,7 @@ function App() {
             <NavBar />
             <Routes>
                 <Route exact path="/" element={<Home />} />
-                {/* <Route exact path="home" element={<Home />} /> */}
+                <Route exact path="home" element={<Home />} />
                 <Route exact path="cryptos" element={<Cryptos />} />
                 <Route exact path="favorites" element={<Favorites />} />
                 <Route exact path="news" element={<News />} />

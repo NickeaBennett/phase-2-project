@@ -7,7 +7,7 @@ import DataTable from '../coins/DataTable';
 
 const Home = () => {
   return (
-    <Box bgcolor='#FAF9F6' flex={4} p={2}>
+    <Box flex={4} p={10}>
 
       <DataTable />
       
