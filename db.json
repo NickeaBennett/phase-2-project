@@ -1,0 +1,33 @@
+{
+    "news": [
+      {
+        "id": 2,
+        "date": "12 hours ago",
+        "title": "CQ Signs as DIFC FinTech Week’s Media Partner; ComTech as Exhibitor",
+        "description": "\nCoinQuora becomes the media partner of DIFC FinTech Week 2022.The event’s 20 exhibitors will include Citi, Telr, Sift, and ComTech — among many others.DIFC FinTech...",
+        "link": "https://www.investing.com/news/cryptocurrency-news/cq-signs-as-difc-fintech-weeks-media-partner-comtech-as-exhibitor-2841799",
+        "source": "By CoinQuora",
+        "tags": [{
+            "icon": "https://cdn.jsdelivr.net/gh/atomiclabs/cryptocurrency-icons@bea1a9722a8c63169dcc06e86182bf2c55a76bbc/svg/color/generic.svg",
+            "name": "Generic",
+            "symbol": "GENERIC"
+        }]
+      },
+      {
+        "id": 2,
+        "date": "12 hours ago",
+        "title": "CQ Signs as DIFC FinTech Week’s Media Partner; ComTech as Exhibitor",
+        "description": "\nCoinQuora becomes the media partner of DIFC FinTech Week 2022.The event’s 20 exhibitors will include Citi, Telr, Sift, and ComTech — among many others.DIFC FinTech...",
+        "link": "https://www.investing.com/news/cryptocurrency-news/cq-signs-as-difc-fintech-weeks-media-partner-comtech-as-exhibitor-2841799",
+        "source": "By CoinQuora",
+        "tags": [{
+            "icon": "https://cdn.jsdelivr.net/gh/atomiclabs/cryptocurrency-icons@bea1a9722a8c63169dcc06e86182bf2c55a76bbc/svg/color/generic.svg",
+            "name": "Generic",
+            "symbol": "GENERIC"
+        }]
+      }
+    ]
+  }
+
+
+

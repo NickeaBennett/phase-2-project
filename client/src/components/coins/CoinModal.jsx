@@ -3,6 +3,8 @@ import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
 
 const style = {
   position: 'absolute',
@@ -33,11 +35,12 @@ const CoinModal = () =>  {
       >
         <Box sx={style}>
           <Typography id="keep-mounted-modal-title" variant="h6" component="h2">
-            Text in a modal
+            Do you want to add to favorites?
           </Typography>
-          <Typography id="keep-mounted-modal-description" sx={{ mt: 2 }}>
-            Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-          </Typography>
+          <Stack spacing={2} direction="row">
+            <Button variant="outlined">Yes</Button>
+            <Button variant="outlined">No</Button>
+          </Stack>
         </Box>
       </Modal>
     </div>
