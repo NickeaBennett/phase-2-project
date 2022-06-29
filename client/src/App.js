@@ -1,60 +1,90 @@
-// import React from 'react';
 // import { Stack, Button, Typography } from '@mui/material';
 // import HomeIcon from '@mui/icons-material/HomeOutlined';
-// // import { Routes, Route } from 'react-router-dom';
 // import { Typography } from '@mui/material';
 // import CssBaseline from '@mui/material/CssBaseline';
 // import { Layout, Typography, Space } from 'antd';
 // import { HeartOutlined } from "@ant-design/icons";
 // Imports components from index.js
-
 // import ResponsiveAppBar from './components/Nav';
 // import Navbar from './components/Nav';
-// import { Homepage, Cryptocurrencies, Favorites} from './components/';
-import RightBar from './components/RightBar';
-import Feed from './components/Feed';
-import LeftBar from './components/LeftBar';
-import Cryptocurrencies from './components/Cryptocurrencies';
-import Favorites from './components/Favorites';
+// import SideBar from './components/layout/SideBar';
+// import RightBar from './components/layout/RightBar';
+// import Cryptos from './pages/Cryptos';
+// import { Box } from '@mui/material';
+// import { useEffect, useState } from 'react';
+// import PageRoutes from './components/pages/PageRoutes';
+// import DataTable from './components/coins/DataTable';
+import Favorites from './pages/Favorites';
+import NavBar from './components/layout/NavBar';
+import React from 'react';
+import { Navigate , Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import News from './pages/News';
+import Layout from './components/layout/Layout';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 
-import { Box, Container, Stack } from '@mui/material';
+const theme = createTheme({
+
+})
+
 
 function App() {
-
+  
      return (   
-        <Box>
-            <Stack direction='row' spacing={2} justifyContent='space-between'>            {/* <Navbar /> */}
-                <LeftBar/>
-                <Feed />
-                <RightBar/>
-            </Stack>
-        </Box>
-        // <div className='App'>
-        //     <h1>Hello World</h1>
-        //     <Stack spacing={2} direction="row">
-        //         <Button variant="text">Text</Button>
-        //         <Button 
-        //             startIcon={<HomeIcon />} 
-        //             variant='contained'
-        //             color='otherColor'
-        //             size='small'
-        //             >
-        //                 Contained
-        //         </Button>
-        //         <Button variant="outlined">Outlined</Button>
-        //     </Stack>
-        //     <div>
-        //         <Typography variant="h1" component="h2">
-        //             h1. Heading
-        //         </Typography>;
-        //     </div>
-        // </div>
-    );
+        <ThemeProvider theme={theme}>
+                <Layout>
+                <NavBar />
+                <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/Home" element={<Navigate replace to="/" />} />
+                    {/* <Route exact path="home" element={<Home />} /> */}
+                    {/* <Route path='/' element={ <Redirect to="/home" /> }/> */}
+                    {/* <Route exact path="/home" element={<Redirect to='/' />} /> */}
+                    {/* <Route exact path="cryptos" element={<Cryptos />} /> */}
+                    <Route exact path="favorites" element={<Favorites />} />
+                    <Route exact path="news" element={<News />} />
+                    {/* <Route render={() => <Navigate to="/" />} /> */}
+                </Routes>
+                </Layout>
+                {/* <Stack direction='row' spacing={2} justifyContent='space-between'>            <Navbar /> */}
+                {/* <SideBar/> */}
+                {/* <DataTable /> */}
+                {/* <Home /> */}
+                {/* <RightBar/> */}
+                {/* <PageRoutes /> */}
+                {/* </Stack> */}
+            
+        </ThemeProvider>
+      
+
+        
+
+);
 }
 
 export default App;
 
 
+// <div className='App'>
+//     <h1>Hello World</h1>
+//     <Stack spacing={2} direction="row">
+//         <Button variant="text">Text</Button>
+//         <Button 
+//             startIcon={<HomeIcon />} 
+//             variant='contained'
+//             color='otherColor'
+//             size='small'
+//             >
+//                 Contained
+//         </Button>
+//         <Button variant="outlined">Outlined</Button>
+//     </Stack>
+//     <div>
+//         <Typography variant="h1" component="h2">
+//             h1. Heading
+//         </Typography>;
+//     </div>
+// </div>
 
 // import * as React from 'react';
 // // import { createTheme, ThemeProvider } from '@mui/material/styles';
