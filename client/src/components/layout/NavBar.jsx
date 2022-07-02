@@ -15,7 +15,7 @@ import MenuItem from '@mui/material/MenuItem';
 
 import { Link } from 'react-router-dom';
 
-const pages = ['Home', 'Favorites', 'News'];
+const pages = ['Home', 'MyArticles', 'News'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 const NavBar = () => {
@@ -56,7 +56,7 @@ const NavBar = () => {
               color: 'inherit',
               textDecoration: 'none',
             }}
-          >
+            >
             CryptoMarket MVP
           </Typography>
 
@@ -111,7 +111,7 @@ const NavBar = () => {
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
+                sx={{ my: 2, color: 'white', display: 'block', textDecoration: 'none',}}
               >
                 <Link to={`/${page}` }>{page}</Link>
               </Button>

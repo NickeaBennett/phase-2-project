@@ -14,7 +14,7 @@
 // import { useEffect, useState } from 'react';
 // import PageRoutes from './components/pages/PageRoutes';
 // import DataTable from './components/coins/DataTable';
-import Favorites from './pages/Favorites';
+import MyArticle from './pages/MyArticles';
 import NavBar from './components/layout/NavBar';
 import React from 'react';
 import { Navigate , Routes, Route } from 'react-router-dom';
@@ -24,7 +24,11 @@ import Layout from './components/layout/Layout';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 const theme = createTheme({
-
+        palette: {
+            primary: {  
+                main: '#f9f9f9'    
+                }
+        }
 })
 
 
@@ -41,7 +45,7 @@ function App() {
                     {/* <Route path='/' element={ <Redirect to="/home" /> }/> */}
                     {/* <Route exact path="/home" element={<Redirect to='/' />} /> */}
                     {/* <Route exact path="cryptos" element={<Cryptos />} /> */}
-                    <Route exact path="favorites" element={<Favorites />} />
+                    <Route exact path="myarticles" element={<MyArticle />} />
                     <Route exact path="news" element={<News />} />
                     {/* <Route render={() => <Navigate to="/" />} /> */}
                 </Routes>

@@ -16,16 +16,16 @@ const DataTable = () => {
       width: 70, 
       renderCell: (params) => <img src={params.value} width='40px' padding='10px'/>,
     },
-    { field: 'name', headerName: 'Coin', width: 130 },
-    { field: 'symbol', headerName: 'Symbol', width: 130 },
+    { field: 'name', headerName: 'Coin', width: 200 },
+    { field: 'symbol', headerName: 'Symbol', width: 200 },
     { 
     
       field: 'current_price', 
       headerName: 'Current Price', 
       type: 'number', 
-      width: 130
+      width: 200
     },
-    { field: 'market_cap', headerName: 'Market Cap', width: 130},
+    { field: 'market_cap', headerName: 'Market Cap', width: 200},
   ];
   
   useEffect(() => {
@@ -42,7 +42,7 @@ const DataTable = () => {
 
   return (
     
-        <div style={{ height: 700, width: '60%' }}>
+        <div style={{ height: 700, width: '1000%' }}>
         <DataGrid
             rows={getCoins}
             columns={columns}

@@ -2,8 +2,10 @@
 import React, { useEffect, useState } from 'react';
 import Grid from '@mui/material/Grid';
 // import Paper from '@mui/material/Paper';
-import { Container } from '@mui/system';
+// import { Container } from '@mui/system';
+import Typography from '@mui/material/Typography';
 import NewsCard from '../components/NewsCard';
+import { Container } from '@mui/material';
 // import Stack from '@mui/material/Stack';
 // import { styled } from '@mui/material/styles';
 
@@ -17,22 +19,12 @@ import NewsCard from '../components/NewsCard';
   //   MoreVert  
   // } from '@mui/icons-material';
 
-
-
-
 const News = () => {
   const [getNews, setNews] = useState([])
 
-
-  // const bull = (
-  // <Box
-  //     component="span"
-  //     sx={{ display: 'inline-block', mx: '5px', transform: 'scale(0.8)' }}
-  // >
-  //     •
-  // </Box>
-  // );
-
+  const [addFavNews, setAddFavNews] = useState([]);
+  // function HandleFavorite(e) {
+    
   const options = {
       method: 'GET',
       headers: {
@@ -48,26 +40,21 @@ const News = () => {
           .catch(err => console.error(err));
       }, [])
 
+
   return (
     <Container>
-      {/* <Grid container>
-        <Grid item xs={12} sm={6} md={3}>
-          <Paper>1</Paper>
-        </Grid>
-        <Grid item xs={12} sm={6} md={3}>
-          <Paper>2</Paper>
-        </Grid>
-        <Grid item xs={12} sm={6} md={3}>
-          <Paper>3</Paper>
-        </Grid>
-        <Grid item xs={12} sm={6} md={3}>
-          <Paper>4</Paper>
-        </Grid>
-      </Grid> */}
-      <Grid container spacing={3}>
+      
+      <Typography
+        variant="h6"
+        component="h2"
+        gutterBottom
+      >
+        Global Crypto News
+      </Typography>
+      <Grid container>
         {getNews.map(news => (
-          <Grid item key={news.description} xs={12} sm={6} md={3}>
-            <NewsCard news={news} />
+          <Grid item key={news.title} xs={12} sm={6} md={3}>
+            <NewsCard news={news}  />
           </Grid>
           ))}
       </Grid>
