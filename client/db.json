@@ -1,19 +1,34 @@
 {
-  "posts": [
+  "news": [
+    {
+      "id": 0,
+      "title": "CQ Signs as DIFC FinTech Week’s Media Partner; ComTech as Exhibitor",
+      "description": "CoinQuora becomes the media partner of DIFC FinTech Week 2022.The event’s 20 exhibitors will include Citi, Telr, Sift, and ComTech — among many others.DIFC FinTech...",
+      "source": "By CoinQuora"
+    },
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "title": "CQ Signs as DIFC FinTech Week’s Media Partner; ComTech as Exhibitor",
+      "description": "CoinQuora becomes the media partner of DIFC FinTech Week 2022.The event’s 20 exhibitors will include Citi, Telr, Sift, and ComTech — among many others.DIFC FinTech...",
+      "source": "By CoinQuora"
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "title": "dfdfdfdfdfd",
+      "description": "dfdffdf",
+      "source": "dfdfdffdf",
+      "id": 2
+    },
+    {
+      "title": "fdfdff",
+      "description": "dfdffdf",
+      "source": "dfdfdff",
+      "id": 3
+    },
+    {
+      "title": "tytytytyt",
+      "description": "tytyy",
+      "source": "tytyyty",
+      "id": 4
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }

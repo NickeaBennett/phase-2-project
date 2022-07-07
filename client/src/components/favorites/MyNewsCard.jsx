@@ -11,38 +11,35 @@ import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
 function FavoriteNewsCard({ news }) {
   
 
-      const handleDelete = (news) => {
+    const handleDelete = (news) => {
         // await fetch(`http://localhost:8000/news/${id}`, {
         //   method: "DELETE"
       // })
-      console.log (news.id)
+      // console.log (news)
      
     }
-     
-  
     
-
-  return (
-    <Container>
-    
-      <Card elevation={1}>
-        <CardHeader 
-          action={
-            <IconButton onClick={handleDelete}>
-              <DeleteOutlinedIcon />
-            </IconButton>
-          }
-          title={news.title}
-          subheader={news.description}
-        />
-        <CardContent>
-          <Typography variant='body2' color='textSecondary'>
-            {news.source} <br />
-            {news.date}
-          </Typography>
-        </CardContent>
-      </Card>
-    </Container>
-  )
+    return (
+      <Container>
+      
+        <Card elevation={1}>
+          <CardHeader 
+            action={
+              <IconButton onClick={handleDelete}>
+                <DeleteOutlinedIcon />
+              </IconButton>
+            }
+            title={news.title}
+            subheader={news.description}
+          />
+          <CardContent>
+            <Typography variant='body2' color='textSecondary'>
+              {news.source} <br />
+              {news.date}
+            </Typography>
+          </CardContent>
+        </Card>
+      </Container>
+    )
 }
 export default FavoriteNewsCard;
