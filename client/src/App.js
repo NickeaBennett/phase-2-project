@@ -1,19 +1,3 @@
-// import { Stack, Button, Typography } from '@mui/material';
-// import HomeIcon from '@mui/icons-material/HomeOutlined';
-// import { Typography } from '@mui/material';
-// import CssBaseline from '@mui/material/CssBaseline';
-// import { Layout, Typography, Space } from 'antd';
-// import { HeartOutlined } from "@ant-design/icons";
-// Imports components from index.js
-// import ResponsiveAppBar from './components/Nav';
-// import Navbar from './components/Nav';
-// import SideBar from './components/layout/SideBar';
-// import RightBar from './components/layout/RightBar';
-// import Cryptos from './pages/Cryptos';
-// import { Box } from '@mui/material';
-// import { useEffect, useState } from 'react';
-// import PageRoutes from './components/pages/PageRoutes';
-// import DataTable from './components/coins/DataTable';
 import MyArticle from './pages/MyArticles';
 import NavBar from './components/layout/NavBar';
 import React from 'react';
